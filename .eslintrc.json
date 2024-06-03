@@ -1,0 +1,41 @@
+{
+  "root": true,
+  "env": {
+    "browser": true
+  },
+  "parserOptions": {
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+  "rules": {
+    "quotes": ["error", "single"],
+    "semi": ["warn", "always"],
+    "no-console": "warn",
+    "no-multiple-empty-lines": ["warn", { "max": 2 }],
+    "comma-dangle": ["error", "always-multiline"],
+    "no-trailing-spaces": "error",
+    "no-irregular-whitespace": "warn",
+    "eqeqeq": "error",
+    "no-empty": "error",
+    "max-len": ["warn", { "code": 165 }],
+    "no-var": "error",
+    "arrow-parens": "error",
+    "no-extra-semi": "error",
+    "no-mixed-spaces-and-tabs": "error",
+    "no-else-return": "warn",
+    "no-debugger": "error",
+    "no-multi-spaces": "error",
+    "prefer-template": "error",
+    "object-curly-spacing": ["error", "always"],
+    "prefer-const": "error",
+    "no-extra-parens": "error",
+    "comma-spacing": "error",
+    "no-extra-boolean-cast": "error",
+    "no-useless-return": "warn",
+    "no-useless-escape": "error",
+    "no-useless-concat": "error",
+    "no-multi-assign": "error",
+    "no-new-object": "error",
+    "no-extra-label": "error"
+  }
+}

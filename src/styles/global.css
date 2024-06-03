@@ -1,0 +1,45 @@
+*,
+*::before,
+*::after {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  :root {
+    scroll-behavior: smooth;
+  }
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font:
+    400 14px / 1.5 'PingFang',
+    serif;
+  height: 100svh;
+  display: flex;
+}
+
+main {
+  display: flex;
+  flex: auto;
+  flex-direction: column;
+  overflow: auto;
+}
+
+a {
+  color: var(--primary-color);
+  cursor: pointer;
+  font-weight: 500;
+
+  &:hover {
+    filter: brightness(120%);
+  }
+}
+
+.main-section {
+  flex: auto;
+}

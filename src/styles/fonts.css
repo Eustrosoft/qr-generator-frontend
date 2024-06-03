@@ -1,0 +1,17 @@
+@font-face {
+  src: url('fonts/PingFang-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-family: PingFang;
+}
+
+@font-face {
+  src: url('fonts/PingFang-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-family: PingFang;
+}
+
+@font-face {
+  src: url('fonts/PingFang-SC-Heavy.ttf') format('truetype');
+  font-weight: 600;
+  font-family: PingFang;
+}

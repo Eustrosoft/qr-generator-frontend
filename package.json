@@ -1,0 +1,25 @@
+{
+  "name": "qr-generator-frontend",
+  "description": "",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host --open",
+    "lint": "eslint --ext .js ./",
+    "lint:fix": "eslint --fix --ext .js ./",
+    "format": "prettier --write \"./**/*.{js,jsx,json,css}\"",
+    "build": "vite build",
+    "preview": "vite preview --open",
+    "buildpreview": "vite build && vite preview --open"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.19",
+    "cssnano": "^7.0.1",
+    "eslint": "^8.57.0",
+    "postcss": "^8.4.38",
+    "postcss-nesting": "^12.1.4",
+    "prettier": "^3.2.5",
+    "vite": "5.2.11",
+    "vite-plugin-eslint": "^1.8.1"
+  }
+}
