@@ -1,0 +1,5 @@
+form[name='text'],
+form[name='url'] {
+  display: flex;
+  flex-direction: column;
+}
