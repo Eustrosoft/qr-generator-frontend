@@ -5,26 +5,79 @@
     <link rel="icon" type="image/x-icon" href="src/assets/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>QR Generator</title>
+    <link rel="stylesheet" href="./src/styles.css" />
   </head>
 
   <body>
-    <main id="app">
-      <header>header</header>
-      <section class="main-section">
-        <ui-tabs>
-          <ui-tab label="UiTabComponent 1">
-            <p>This is the content of UiTabComponent 1.</p>
-          </ui-tab>
-          <ui-tab label="UiTabComponent 2">
-            <p>This is the content of UiTabComponent 2.</p>
-          </ui-tab>
-          <ui-tab label="UiTabComponent 3">
-            <p>This is the content of UiTabComponent 3.</p>
-          </ui-tab>
-        </ui-tabs>
-      </section>
-      <footer>footer</footer>
+    <main>
+      <div class="section-wrapper">
+        <section class="tabs">
+          <div class="tab active">Текст</div>
+          <div class="tab">URL</div>
+          <div class="tab">Телефон</div>
+          <div class="tab">SMS</div>
+          <div class="tab">EMAIL</div>
+          <div class="tab">WIFI</div>
+        </section>
+        <section class="tab-contents">
+          <div class="tab-content active">
+            <form name="text">
+              <textarea
+                rows="5"
+                class="qr-textarea"
+                name="qr-textarea-input"
+                placeholder="Текст"
+              ></textarea>
+              <button class="generate-button" type="submit">
+                Сгенерировать
+              </button>
+            </form>
+          </div>
+          <div class="tab-content">
+            <form name="url">
+              <input type="text" name="qr-url-input" placeholder="URL" />
+              <button class="generate-button" type="submit">
+                Сгенерировать
+              </button>
+            </form>
+          </div>
+          <div class="tab-content">
+            <form name="url">
+              <input type="text" name="qr-phone-input" placeholder="Телефон" />
+              <button type="submit">Сгенерировать</button>
+            </form>
+          </div>
+          <div class="tab-content">
+            <form name="url">
+              <input type="text" name="qr-sms-input" placeholder="SMS" />
+              <button type="submit">Сгенерировать</button>
+            </form>
+          </div>
+          <div class="tab-content">
+            <form name="url">
+              <input type="text" name="qr-email-input" placeholder="EMAIL" />
+              <button type="submit">Сгенерировать</button>
+            </form>
+          </div>
+          <div class="tab-content">
+            <form name="url">
+              <input type="text" name="qr-wifi-input" placeholder="WI-FI" />
+              <button type="submit">Сгенерировать</button>
+            </form>
+          </div>
+        </section>
+        <section class="qr-generation-result">
+          <h1 style="text-align: center">Результат генерации</h1>
+        </section>
+        <section class="preview">
+          <img
+            class="qr-preview"
+            src="./src/assets/img/qr-code-example.svg"
+            alt="qr code example"
+          />
+        </section>
+      </div>
     </main>
-    <script type="module" src="/src/main.js"></script>
+    <script type="module" src="./src/main.js"></script>
   </body>
 </html>

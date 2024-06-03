@@ -1,3 +1,14 @@
-import './styles.css';
-import './app/ui/ui-tabs/ui-tabs.component.js';
-import './app/ui/ui-tabs/ui-tab.component.js';
+import { initTabs } from './app/components/tabs.js';
+import { initForms } from './app/components/forms.js';
+
+document.addEventListener('DOMContentLoaded', () => {
+  initTabs();
+  initForms(async (formData) => {
+    try {
+      const response = await submitForm(formData);
+      console.log('Form submitted successfully:', response);
+    } catch (error) {
+      console.error('Form submission failed:', error);
+    }
+  });
+});

@@ -1,3 +1,70 @@
 :root {
-  --primary-color: #4a66e3;
+  /* Taupe */
+  --taupe-DEFAULT: #463f3a;
+  --taupe-100: #0e0d0c;
+  --taupe-200: #1c1917;
+  --taupe-300: #2a2623;
+  --taupe-400: #38322e;
+  --taupe-500: #463f3a;
+  --taupe-600: #6f645d;
+  --taupe-700: #978b82;
+  --taupe-800: #b9b1ac;
+  --taupe-900: #dcd8d5;
+
+  /* Battleship Gray */
+  --battleship-gray-DEFAULT: #8a817c;
+  --battleship-gray-100: #1c1a18;
+  --battleship-gray-200: #373331;
+  --battleship-gray-300: #534d49;
+  --battleship-gray-400: #6e6662;
+  --battleship-gray-500: #8a817c;
+  --battleship-gray-600: #a19995;
+  --battleship-gray-700: #b9b3b0;
+  --battleship-gray-800: #d0ccca;
+  --battleship-gray-900: #e8e6e5;
+
+  /* Silver */
+  --silver-DEFAULT: #bcb8b1;
+  --silver-100: #282622;
+  --silver-200: #4f4b44;
+  --silver-300: #777165;
+  --silver-400: #9c958a;
+  --silver-500: #bcb8b1;
+  --silver-600: #cac7c1;
+  --silver-700: #d8d5d1;
+  --silver-800: #e5e3e0;
+  --silver-900: #f2f1f0;
+
+  /* Isabelline */
+  --isabelline-DEFAULT: #f4f3ee;
+  --isabelline-100: #3b3726;
+  --isabelline-200: #756e4d;
+  --isabelline-300: #a8a17a;
+  --isabelline-400: #cfcab5;
+  --isabelline-500: #f4f3ee;
+  --isabelline-600: #f7f6f3;
+  --isabelline-700: #f9f8f6;
+  --isabelline-800: #fbfbf9;
+  --isabelline-900: #fdfdfc;
+
+  /* Melon */
+  --melon-DEFAULT: #e0afa0;
+  --melon-100: #3a1c13;
+  --melon-200: #743825;
+  --melon-300: #ad5438;
+  --melon-400: #cd7d65;
+  --melon-500: #e0afa0;
+  --melon-600: #e6beb2;
+  --melon-700: #eccec5;
+  --melon-800: #f3dfd8;
+  --melon-900: #f9efec;
+
+  /* Breakpoints */
+  --breakpoint-1920: 1919px;
+  --breakpoint-1680: 1679px;
+  --breakpoint-1440: 1439px;
+  --breakpoint-1200: 1199px;
+  --breakpoint-800: 799px;
+  --breakpoint-600: 599px;
+  --breakpoint-400: 399px;
 }

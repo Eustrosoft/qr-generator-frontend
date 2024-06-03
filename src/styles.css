@@ -2,3 +2,8 @@
 @import 'styles/vars.css';
 @import 'styles/fonts.css';
 @import 'styles/global.css';
+@import 'styles/common.css';
+@import 'styles/components/tabs.css';
+@import 'styles/components/qr-generation-result.css';
+@import 'styles/components/forms.css';
+@import 'styles/components/buttons.css';
