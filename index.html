@@ -5,25 +5,29 @@
     <link rel="icon" type="image/x-icon" href="src/assets/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>QR Generator</title>
+    <link rel="stylesheet" href="/src/styles.css" />
   </head>
 
   <body>
-    <main id="app">
-      <header>header</header>
-      <section class="main-section">
-        <ui-tabs>
-          <ui-tab label="UiTabComponent 1">
-            <p>This is the content of UiTabComponent 1.</p>
-          </ui-tab>
-          <ui-tab label="UiTabComponent 2">
-            <p>This is the content of UiTabComponent 2.</p>
-          </ui-tab>
-          <ui-tab label="UiTabComponent 3">
-            <p>This is the content of UiTabComponent 3.</p>
-          </ui-tab>
-        </ui-tabs>
-      </section>
-      <footer>footer</footer>
+    <main>
+      <div class="tabs">
+        <div class="tab active">Tab 1</div>
+        <div class="tab">Tab 2</div>
+      </div>
+      <div class="tab-contents">
+        <div class="tab-content active">
+          <form id="form1">
+            <input type="text" name="field1" placeholder="Field 1" />
+            <button type="submit">Submit</button>
+          </form>
+        </div>
+        <div class="tab-content">
+          <form id="form2">
+            <input type="text" name="field2" placeholder="Field 2" />
+            <button type="submit">Submit</button>
+          </form>
+        </div>
+      </div>
     </main>
     <script type="module" src="/src/main.js"></script>
   </body>

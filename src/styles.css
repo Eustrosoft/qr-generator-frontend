@@ -2,3 +2,30 @@
 @import 'styles/vars.css';
 @import 'styles/fonts.css';
 @import 'styles/global.css';
+
+.tabs {
+  display: flex;
+}
+
+.tab {
+  padding: 10px;
+  cursor: pointer;
+  background-color: #f0f0f0;
+  margin-right: 5px;
+}
+
+.tab.active {
+  background-color: #ccc;
+}
+
+.tab-contents {
+  margin-top: 20px;
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
