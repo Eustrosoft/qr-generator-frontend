@@ -1,5 +1,5 @@
 import { initTabs } from './app/components/tabs.js';
-import { initForms } from './app/components/form.js';
+import { initForms } from './app/components/forms.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   initTabs();

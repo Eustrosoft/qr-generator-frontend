@@ -58,4 +58,13 @@
   --melon-700: #eccec5;
   --melon-800: #f3dfd8;
   --melon-900: #f9efec;
+
+  /* Breakpoints */
+  --breakpoint-1920: 1919px;
+  --breakpoint-1680: 1679px;
+  --breakpoint-1440: 1439px;
+  --breakpoint-1200: 1199px;
+  --breakpoint-800: 799px;
+  --breakpoint-600: 599px;
+  --breakpoint-400: 399px;
 }
