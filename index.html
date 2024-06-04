@@ -22,12 +22,15 @@
         <section class="tab-contents">
           <div class="tab-content active">
             <form name="text">
-              <textarea
-                rows="5"
-                class="qr-textarea"
-                name="qr-textarea-input"
-                placeholder="Текст"
-              ></textarea>
+              <label class="form-control">
+                <span class="form-control-label">Текст:</span>
+                <textarea
+                  rows="5"
+                  class="qr-textarea"
+                  name="text"
+                  placeholder="Ваш текст"
+                ></textarea>
+              </label>
               <button class="generate-button" type="submit">
                 Сгенерировать
               </button>
@@ -35,34 +38,173 @@
           </div>
           <div class="tab-content">
             <form name="url">
-              <input type="text" name="qr-url-input" placeholder="URL" />
+              <label class="form-control">
+                <span class="form-control-label">URL:</span>
+                <input
+                  type="text"
+                  name="url"
+                  class="qr-text-input"
+                  placeholder="Ссылка"
+                />
+              </label>
               <button class="generate-button" type="submit">
                 Сгенерировать
               </button>
             </form>
           </div>
           <div class="tab-content">
-            <form name="url">
-              <input type="text" name="qr-phone-input" placeholder="Телефон" />
-              <button type="submit">Сгенерировать</button>
+            <form name="phone">
+              <label class="form-control">
+                <span class="form-control-label">Номер телефона:</span>
+                <input
+                  type="text"
+                  name="phoneNumber"
+                  class="qr-text-input"
+                  placeholder="Номер"
+                />
+              </label>
+              <button class="generate-button" type="submit">
+                Сгенерировать
+              </button>
             </form>
           </div>
           <div class="tab-content">
-            <form name="url">
-              <input type="text" name="qr-sms-input" placeholder="SMS" />
-              <button type="submit">Сгенерировать</button>
+            <form name="sms">
+              <label class="form-control">
+                <span class="form-control-label">Номер телефона:</span>
+                <input
+                  type="text"
+                  name="phoneNumber"
+                  class="qr-text-input"
+                  placeholder="Номер"
+                />
+              </label>
+              <label class="form-control">
+                <span class="form-control-label">Текст сообщения:</span>
+                <textarea
+                  rows="5"
+                  class="qr-textarea"
+                  name="messageText"
+                  placeholder="Текст"
+                ></textarea>
+              </label>
+              <button class="generate-button" type="submit">
+                Сгенерировать
+              </button>
             </form>
           </div>
           <div class="tab-content">
-            <form name="url">
-              <input type="text" name="qr-email-input" placeholder="EMAIL" />
-              <button type="submit">Сгенерировать</button>
+            <form name="email">
+              <label class="form-control">
+                <span class="form-control-label">Email адрес:</span>
+                <input
+                  type="email"
+                  name="email"
+                  class="qr-text-input"
+                  placeholder="example@mail.com"
+                />
+              </label>
+              <label class="form-control">
+                <span class="form-control-label">Тема письма:</span>
+                <input
+                  type="email"
+                  name="subject"
+                  class="qr-text-input"
+                  placeholder="Тема"
+                />
+              </label>
+              <label class="form-control">
+                <span class="form-control-label">Текст сообщения:</span>
+                <textarea
+                  rows="5"
+                  class="qr-textarea"
+                  name="messageText"
+                  placeholder="Текст"
+                ></textarea>
+              </label>
+              <button class="generate-button" type="submit">
+                Сгенерировать
+              </button>
             </form>
           </div>
           <div class="tab-content">
-            <form name="url">
-              <input type="text" name="qr-wifi-input" placeholder="WI-FI" />
-              <button type="submit">Сгенерировать</button>
+            <form name="wifi">
+              <label class="form-control" for="networkName">
+                <span class="form-control-label">Имя сети:</span>
+              </label>
+              <div class="wifi-ssid-control">
+                <input
+                  type="text"
+                  id="networkName"
+                  name="networkName"
+                  class="qr-text-input"
+                  placeholder="SSID"
+                />
+                <label class="checkbox-form-control">
+                  <span class="form-control-checkbox-radio-label">
+                    Скрытая сеть
+                  </span>
+                  <input
+                    type="checkbox"
+                    name="isHiddenNetwork"
+                    class="qr-checkbox-input"
+                  />
+                </label>
+              </div>
+              <label class="form-control">
+                <span class="form-control-label">Пароль:</span>
+                <input
+                  type="password"
+                  name="password"
+                  class="qr-text-input"
+                  placeholder="Пароль"
+                />
+              </label>
+              <span class="form-control-label"> Тип шифрования: </span>
+              <div class="wifi-encryption-radio-buttons">
+                <label class="checkbox-form-control">
+                  <span class="form-control-checkbox-radio-label"> WPA </span>
+                  <input
+                    type="radio"
+                    name="encryption"
+                    class="qr-radio-input"
+                    value="wpa"
+                  />
+                </label>
+                <label class="checkbox-form-control">
+                  <span class="form-control-checkbox-radio-label"> WPA2 </span>
+                  <input
+                    type="radio"
+                    name="encryption"
+                    class="qr-radio-input"
+                    value="wpa2"
+                  />
+                </label>
+                <label class="checkbox-form-control">
+                  <span class="form-control-checkbox-radio-label"> WPA3 </span>
+                  <input
+                    type="radio"
+                    name="encryption"
+                    class="qr-radio-input"
+                    value="wpa3"
+                  />
+                </label>
+                <label class="checkbox-form-control">
+                  <span class="form-control-checkbox-radio-label">
+                    Нет шифрования (Общедоступная сеть)
+                  </span>
+                  <input
+                    type="radio"
+                    name="encryption"
+                    class="qr-radio-input"
+                    value="none"
+                  />
+                </label>
+              </div>
+
+              <button class="generate-button" type="submit">
+                Сгенерировать
+              </button>
             </form>
           </div>
         </section>

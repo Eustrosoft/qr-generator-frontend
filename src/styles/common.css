@@ -39,3 +39,22 @@
   height: 100%;
   object-fit: contain;
 }
+
+.wifi-ssid-control {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.wifi-ssid-control input {
+  flex: auto;
+}
+
+.wifi-encryption-radio-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+}

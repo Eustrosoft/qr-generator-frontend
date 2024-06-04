@@ -1,5 +1,9 @@
 form[name='text'],
-form[name='url'] {
+form[name='url'],
+form[name='phone'],
+form[name='sms'],
+form[name='email'],
+form[name='wifi'] {
   display: flex;
   flex-direction: column;
   gap: 32px;
@@ -9,9 +13,57 @@ form[name='url'] {
   }
 }
 
+form[name='email'],
+form[name='wifi'] {
+  gap: 16px;
+}
+
+.form-control {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.form-control-label {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.form-control-checkbox-radio-label {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.checkbox-form-control {
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+  gap: 8px;
+}
+
 .qr-textarea {
   border-radius: 16px;
   border: 0;
   padding: 8px;
   font-size: 16px;
+}
+
+.qr-text-input {
+  font-size: 16px;
+  border-radius: 16px;
+  border: 0;
+  padding: 8px;
+  height: 56px;
+}
+
+.qr-checkbox-input {
+  height: 20px;
+  width: 20px;
+  accent-color: var(--melon-300);
+}
+
+.qr-radio-input {
+  height: 20px;
+  width: 20px;
+  accent-color: var(--melon-300);
 }
