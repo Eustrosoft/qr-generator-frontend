@@ -3,6 +3,7 @@
   "description": "",
   "version": "1.0.0",
   "type": "module",
+  "repository": "https://github.com/Eustrosoft/qr-generator-frontend",
   "scripts": {
     "dev": "node server.cjs",
     "lint": "eslint --ext .js ./",
