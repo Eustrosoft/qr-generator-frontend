@@ -1,14 +1,8 @@
-import { initTabs } from './app/components/tabs.js';
-import { initForms } from './app/components/forms.js';
+import { initTabs } from './app/components/tabs/tabs.js';
+import { initForms } from './app/components/forms/forms.js';
+import { makeQrByType } from './app/components/forms/make-qr-by-type.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   initTabs();
-  initForms(async (formData) => {
-    try {
-      const response = await submitForm(formData);
-      console.log('Form submitted successfully:', response);
-    } catch (error) {
-      console.error('Form submission failed:', error);
-    }
-  });
+  initForms(async (form) => await makeQrByType(form));
 });

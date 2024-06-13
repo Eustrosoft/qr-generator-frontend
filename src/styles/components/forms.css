@@ -1,9 +1,9 @@
-form[name='text'],
-form[name='url'],
-form[name='phone'],
-form[name='sms'],
-form[name='email'],
-form[name='wifi'] {
+form[name='TEXT'],
+form[name='URL'],
+form[name='PHONE'],
+form[name='SMS'],
+form[name='EMAIL'],
+form[name='WIFI'] {
   display: flex;
   flex-direction: column;
   gap: 32px;
@@ -13,8 +13,8 @@ form[name='wifi'] {
   }
 }
 
-form[name='email'],
-form[name='wifi'] {
+form[name='EMAIL'],
+form[name='WIFI'] {
   gap: 16px;
 }
 

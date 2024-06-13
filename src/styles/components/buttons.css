@@ -25,6 +25,7 @@
 
 .generate-button:disabled {
   pointer-events: none;
+  background: var(--silver-300);
 }
 
 .generate-button:hover {

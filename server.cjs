@@ -6,7 +6,8 @@ const params = {
   open: false,
   file: 'index.html',
   logLevel: 2,
-  proxy: [['/api', '']],
+  proxy: [['/qrgen', 'https://debug.dev37.qxyz.ru']],
+  
 };
 
 start(params);
