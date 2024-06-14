@@ -4,12 +4,16 @@ export const initForms = (handleSubmit) => {
   forms.forEach((form) => {
     form.addEventListener('submit', async (event) => {
       event.preventDefault();
-      const formData = new FormData(event.target);
-      const formValue = Object.fromEntries(formData);
+      const formValue = getFormValue(event.target);
       await handleSubmit({
         formName: event.target.name,
         ...formValue,
       });
     });
   });
+};
+
+export const getFormValue = (form) => {
+  const formData = new FormData(form);
+  return Object.fromEntries(formData);
 };

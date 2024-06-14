@@ -1,4 +1,4 @@
-.generate-button {
+#generate-qr-button {
   appearance: none;
   background-color: var(--melon-200);
   border: 2px solid var(--melon-200);
@@ -23,17 +23,17 @@
   will-change: transform;
 }
 
-.generate-button:disabled {
+#generate-qr-button:disabled {
   pointer-events: none;
   background: var(--silver-300);
 }
 
-.generate-button:hover {
+#generate-qr-button:hover {
   box-shadow: rgba(0, 0, 0, 0.25) 0 8px 16px;
   transform: translateY(-2px);
 }
 
-.generate-button:active {
+#generate-qr-button:active {
   box-shadow: none;
   transform: translateY(0);
 }

@@ -14,3 +14,9 @@ export const initTabs = () => {
     });
   });
 };
+
+export const submitActiveTabForm = () => {
+  const activeTabContent = document.querySelector('.tab-content.active');
+  const activeTabForm = activeTabContent.querySelector('form');
+  activeTabForm.requestSubmit();
+};

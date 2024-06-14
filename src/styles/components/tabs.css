@@ -10,17 +10,20 @@
 }
 
 .tabs {
+  grid-area: tabs;
+  overflow: auto;
+}
+
+.tab-captions {
   display: flex;
   gap: 10px;
   background: var(--silver-700);
   padding: 20px;
   border-radius: 16px;
   overflow: auto;
-  grid-area: 1 / 1 / 2 / 2;
 }
 
 .tab-contents {
-  grid-area: 2 / 1 / 3 / 2;
   overflow: auto;
 }
 

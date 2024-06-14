@@ -1,4 +1,5 @@
-export const QR_TYPE = {
+export const FORM_TYPE = {
+  QXYZ: 'QXYZ',
   TEXT: 'TEXT',
   URL: 'URL',
   PHONE: 'PHONE',
@@ -7,4 +8,7 @@ export const QR_TYPE = {
   CONTACT: 'CONTACT',
   WIFI: 'WIFI',
   LOCATION: 'LOCATION',
+  SHARED_PARAMS: 'SHARED-PARAMS',
 };
+
+export const API_URL = 'https://debug.dev37.qxyz.ru/qrgen/generate';

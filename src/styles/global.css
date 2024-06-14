@@ -41,7 +41,7 @@ main {
   overflow: auto;
   margin: 0 auto;
   max-width: var(--breakpoint-1920);
-  padding: 56px 260px;
+  padding: 56px 94px;
 
   @media (width <= 2560px), (width > 2560px) {
     /*max-width: 1440px;*/

@@ -1,9 +1,11 @@
+form[name='QXYZ'],
 form[name='TEXT'],
 form[name='URL'],
 form[name='PHONE'],
 form[name='SMS'],
 form[name='EMAIL'],
-form[name='WIFI'] {
+form[name='WIFI'],
+form[name='SHARED-PARAMS'] {
   display: flex;
   flex-direction: column;
   gap: 32px;
@@ -13,6 +15,7 @@ form[name='WIFI'] {
   }
 }
 
+form[name='QXYZ'],
 form[name='EMAIL'],
 form[name='WIFI'] {
   gap: 16px;
@@ -56,6 +59,14 @@ form[name='WIFI'] {
   height: 56px;
 }
 
+.qr-color-input {
+  border-radius: 16px;
+  border: 0;
+  padding: 8px;
+  height: 56px;
+  min-width: 56px;
+}
+
 .qr-checkbox-input {
   height: 20px;
   width: 20px;
@@ -66,4 +77,47 @@ form[name='WIFI'] {
   height: 20px;
   width: 20px;
   accent-color: var(--melon-300);
+}
+
+.wifi-ssid-control {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.wifi-ssid-control input {
+  flex: auto;
+}
+
+.wifi-encryption-radio-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.shared-params-form {
+  grid-area: shared-params-form;
+}
+
+.shared-params-colors {
+  display: flex;
+  gap: 32px;
+
+  @media (width <= 1440px) {
+    gap: 16px;
+  }
+}
+
+.file-type-radio-buttons,
+.correction-level-radio-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+
+  @media (width <= 1440px) {
+    gap: 16px;
+  }
 }
