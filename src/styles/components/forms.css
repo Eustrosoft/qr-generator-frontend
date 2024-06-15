@@ -4,7 +4,9 @@ form[name='URL'],
 form[name='PHONE'],
 form[name='SMS'],
 form[name='EMAIL'],
+form[name='CONTACT'],
 form[name='WIFI'],
+form[name='LOCATION'],
 form[name='SHARED-PARAMS'] {
   display: flex;
   flex-direction: column;
@@ -17,7 +19,7 @@ form[name='SHARED-PARAMS'] {
 
 form[name='QXYZ'],
 form[name='EMAIL'],
-form[name='WIFI'] {
+form[name='CONTACT'] {
   gap: 16px;
 }
 
@@ -79,23 +81,14 @@ form[name='WIFI'] {
   accent-color: var(--melon-300);
 }
 
-.wifi-ssid-control {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 16px;
-  flex-wrap: wrap;
-}
-
-.wifi-ssid-control input {
-  flex: auto;
-}
-
 .wifi-encryption-radio-buttons {
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 8px;
+  flex-wrap: wrap;
+  gap: 32px;
+
+  @media (width <= 1440px) {
+    gap: 16px;
+  }
 }
 
 .shared-params-form {

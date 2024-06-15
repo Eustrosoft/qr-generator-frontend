@@ -74,6 +74,7 @@
                     class="qr-textarea"
                     name="text"
                     placeholder="Ваш текст"
+                    required
                   ></textarea>
                 </label>
               </form>
@@ -87,6 +88,7 @@
                     name="url"
                     class="qr-text-input"
                     placeholder="Ссылка"
+                    required
                   />
                 </label>
               </form>
@@ -96,10 +98,11 @@
                 <label class="form-control">
                   <span class="form-control-label">Номер телефона:</span>
                   <input
-                    type="text"
+                    type="tel"
                     name="phoneNumber"
                     class="qr-text-input"
                     placeholder="Номер"
+                    required
                   />
                 </label>
               </form>
@@ -109,10 +112,11 @@
                 <label class="form-control">
                   <span class="form-control-label">Номер телефона:</span>
                   <input
-                    type="text"
-                    name="phoneNumber"
+                    type="tel"
+                    name="phone"
                     class="qr-text-input"
                     placeholder="Номер"
+                    required
                   />
                 </label>
                 <label class="form-control">
@@ -120,8 +124,9 @@
                   <textarea
                     rows="5"
                     class="qr-textarea"
-                    name="messageText"
+                    name="text"
                     placeholder="Текст"
+                    required
                   ></textarea>
                 </label>
               </form>
@@ -134,16 +139,18 @@
                     type="email"
                     name="email"
                     class="qr-text-input"
-                    placeholder="example@mail.com"
+                    placeholder="example@email.com"
+                    required
                   />
                 </label>
                 <label class="form-control">
                   <span class="form-control-label">Тема письма:</span>
                   <input
-                    type="email"
+                    type="text"
                     name="subject"
                     class="qr-text-input"
                     placeholder="Тема"
+                    required
                   />
                 </label>
                 <label class="form-control">
@@ -151,36 +158,102 @@
                   <textarea
                     rows="5"
                     class="qr-textarea"
-                    name="messageText"
+                    name="text"
                     placeholder="Текст"
+                    required
                   ></textarea>
                 </label>
               </form>
             </div>
             <div class="tab-content">
-              <form name="WIFI">
-                <label class="form-control" for="networkName">
-                  <span class="form-control-label">Имя сети:</span>
-                </label>
-                <div class="wifi-ssid-control">
+              <form name="CONTACT">
+                <label class="form-control">
+                  <span class="form-control-label">Имя:</span>
                   <input
                     type="text"
-                    id="networkName"
-                    name="networkName"
+                    name="firstName"
+                    class="qr-text-input"
+                    required
+                  />
+                </label>
+                <label class="form-control">
+                  <span class="form-control-label">Фамилия:</span>
+                  <input type="text" name="lastName" class="qr-text-input" />
+                </label>
+                <label class="form-control">
+                  <span class="form-control-label">Организация:</span>
+                  <input
+                    type="text"
+                    name="organization"
+                    class="qr-text-input"
+                  />
+                </label>
+                <label class="form-control">
+                  <span class="form-control-label">Организация:</span>
+                  <input
+                    type="text"
+                    name="organization"
+                    class="qr-text-input"
+                  />
+                </label>
+                <label class="form-control">
+                  <span class="form-control-label">Должность:</span>
+                  <input type="text" name="title" class="qr-text-input" />
+                </label>
+                <label class="form-control">
+                  <span class="form-control-label">Email адрес:</span>
+                  <input type="email" name="email" class="qr-text-input" />
+                </label>
+                <label class="form-control">
+                  <span class="form-control-label">Рабочий телефон:</span>
+                  <input type="tel" name="phone" class="qr-text-input" />
+                </label>
+                <label class="form-control">
+                  <span class="form-control-label">Мобильный телефон:</span>
+                  <input type="tel" name="mobilePhone" class="qr-text-input" />
+                </label>
+                <label class="form-control">
+                  <span class="form-control-label">Факс:</span>
+                  <input type="text" name="fax" class="qr-text-input" />
+                </label>
+                <label class="form-control">
+                  <span class="form-control-label">Страна:</span>
+                  <input type="text" name="country" class="qr-text-input" />
+                </label>
+                <label class="form-control">
+                  <span class="form-control-label">Регион:</span>
+                  <input type="text" name="region" class="qr-text-input" />
+                </label>
+                <label class="form-control">
+                  <span class="form-control-label">Город:</span>
+                  <input type="text" name="city" class="qr-text-input" />
+                </label>
+                <label class="form-control">
+                  <span class="form-control-label">Улица:</span>
+                  <input type="text" name="street" class="qr-text-input" />
+                </label>
+                <label class="form-control">
+                  <span class="form-control-label">Почтовый индекс:</span>
+                  <input type="text" name="postcode" class="qr-text-input" />
+                </label>
+                <label class="form-control">
+                  <span class="form-control-label">URL:</span>
+                  <input type="text" name="url" class="qr-text-input" />
+                </label>
+              </form>
+            </div>
+            <div class="tab-content">
+              <form name="WIFI">
+                <label class="form-control">
+                  <span class="form-control-label">Имя сети:</span>
+                  <input
+                    type="text"
+                    name="ssid"
                     class="qr-text-input"
                     placeholder="SSID"
+                    required
                   />
-                  <label class="checkbox-form-control">
-                    <span class="form-control-checkbox-radio-label">
-                      Скрытая сеть
-                    </span>
-                    <input
-                      type="checkbox"
-                      name="isHiddenNetwork"
-                      class="qr-checkbox-input"
-                    />
-                  </label>
-                </div>
+                </label>
                 <label class="form-control">
                   <span class="form-control-label">Пароль:</span>
                   <input
@@ -198,43 +271,54 @@
                       type="radio"
                       name="encryption"
                       class="qr-radio-input"
-                      value="wpa"
+                      value="WPA"
                     />
                   </label>
                   <label class="checkbox-form-control">
-                    <span class="form-control-checkbox-radio-label">
-                      WPA2
-                    </span>
+                    <span class="form-control-checkbox-radio-label"> WEP </span>
                     <input
                       type="radio"
                       name="encryption"
                       class="qr-radio-input"
-                      value="wpa2"
-                    />
-                  </label>
-                  <label class="checkbox-form-control">
-                    <span class="form-control-checkbox-radio-label">
-                      WPA3
-                    </span>
-                    <input
-                      type="radio"
-                      name="encryption"
-                      class="qr-radio-input"
-                      value="wpa3"
-                    />
-                  </label>
-                  <label class="checkbox-form-control">
-                    <span class="form-control-checkbox-radio-label">
-                      Нет шифрования (Общедоступная сеть)
-                    </span>
-                    <input
-                      type="radio"
-                      name="encryption"
-                      class="qr-radio-input"
-                      value="none"
+                      value="WEP"
                     />
                   </label>
                 </div>
+              </form>
+            </div>
+            <div class="tab-content">
+              <form name="LOCATION">
+                <label class="form-control">
+                  <span class="form-control-label">Широта:</span>
+                  <input
+                    type="number"
+                    step="0.000001"
+                    inputmode="decimal"
+                    name="latitude"
+                    class="qr-text-input"
+                    required
+                  />
+                </label>
+                <label class="form-control">
+                  <span class="form-control-label">Долгота:</span>
+                  <input
+                    type="number"
+                    step="0.000001"
+                    inputmode="decimal"
+                    name="longitude"
+                    class="qr-text-input"
+                    required
+                  />
+                </label>
+                <label class="form-control">
+                  <span class="form-control-label">Масштаб:</span>
+                  <input
+                    type="number"
+                    name="distance"
+                    class="qr-text-input"
+                    required
+                  />
+                </label>
               </form>
             </div>
           </div>
@@ -361,8 +445,9 @@
             <button id="generate-qr-button" type="button">Сгенерировать</button>
           </form>
         </section>
-        <section class="qr-generation-result">
-          <h1 style="text-align: center">Результат генерации</h1>
+        <section class="qr-generation-result-wrapper">
+          <h1 style="text-align: center">Здесь будет QR</h1>
+          <div id="preview"></div>
         </section>
       </div>
     </main>
