@@ -2,7 +2,7 @@ import { FORM_TYPE } from '../constants/app.constants.js';
 import { renderQrImg } from './render-qr-img.js';
 import { getSharedParamsFormValue } from '../components/forms/forms.js';
 
-export const makeQrByType = async (form) => {
+export const makeQrByType = (form) => {
   const sharedParams = getSharedParamsFormValue();
   switch (form.formName) {
     case FORM_TYPE.QXYZ: {
@@ -20,7 +20,7 @@ export const makeQrByType = async (form) => {
       const params = {
         type: form.formName,
         text: form.text,
-        //...sharedParams,
+        ...sharedParams,
       };
       renderQrImg(params);
       break;

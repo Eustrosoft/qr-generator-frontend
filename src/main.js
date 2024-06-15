@@ -5,6 +5,6 @@ import { initGenerateQrButton } from './app/components/buttons/buttons.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   initTabs();
-  initForms(async (form) => await makeQrByType(form));
+  initForms((form) => makeQrByType(form));
   initGenerateQrButton();
 });
