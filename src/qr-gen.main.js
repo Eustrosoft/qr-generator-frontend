@@ -1,4 +1,4 @@
-export const FORM_TYPE = {
+const FORM_TYPE = {
   QXYZ: 'QXYZ',
   TEXT: 'TEXT',
   URL: 'URL',
@@ -11,9 +11,9 @@ export const FORM_TYPE = {
   SHARED_PARAMS: 'SHARED-PARAMS',
 };
 
-export const API_URL = 'https://debug.dev37.qxyz.ru/qrgen/generate';
+const API_URL = 'https://debug.dev37.qxyz.ru/qrgen/generate';
 
-export const initTabs = () => {
+const initTabs = () => {
   const tabs = document.querySelectorAll('.tab');
   const tabContents = document.querySelectorAll('.tab-content');
 
@@ -30,20 +30,20 @@ export const initTabs = () => {
   });
 };
 
-export const submitActiveTabForm = () => {
+const submitActiveTabForm = () => {
   const activeTabContent = document.querySelector('.tab-content.active');
   const activeTabForm = activeTabContent.querySelector('form');
   activeTabForm.requestSubmit();
 };
 
-export const initGenerateQrButton = () => {
+const initGenerateQrButton = () => {
   const button = document.querySelector('#generate-qr-button');
   button.addEventListener('click', (event) => {
     submitActiveTabForm();
   });
 };
 
-export const initForms = (handleSubmit) => {
+const initForms = (handleSubmit) => {
   const forms = document.querySelectorAll('form');
 
   forms.forEach((form) => {
@@ -58,16 +58,16 @@ export const initForms = (handleSubmit) => {
   });
 };
 
-export const getFormValue = (form) => {
+const getFormValue = (form) => {
   const formData = new FormData(form);
   return Object.fromEntries(formData);
 };
 
-export const getSharedParamsForm = () => {
+const getSharedParamsForm = () => {
   return document.querySelector(`form[name="${FORM_TYPE.SHARED_PARAMS}"]`);
 };
 
-export const makeQrByType = (form) => {
+const makeQrByType = (form) => {
   const sharedParamsForm = getSharedParamsForm();
   sharedParamsForm.requestSubmit();
 
@@ -186,7 +186,7 @@ export const makeQrByType = (form) => {
   }
 };
 
-export const renderQrImg = (params) => {
+const renderQrImg = (params) => {
   const preview = document.querySelector('#preview');
   const qrGenerationResultWrapper = document.querySelector(
     '.qr-generation-result-wrapper',
