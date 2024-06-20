@@ -1,8 +1,477 @@
-@import 'styles/reset.css';
-@import 'styles/vars.css';
-@import 'styles/global.css';
-@import 'styles/common.css';
-@import 'styles/components/tabs.css';
-@import 'styles/components/qr-generation-result.css';
-@import 'styles/components/forms.css';
-@import 'styles/components/buttons.css';
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-family: inherit;
+  line-height: inherit;
+}
+
+p,
+address {
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+input,
+textarea {
+  outline: none;
+  font-family: inherit;
+}
+
+textarea {
+  resize: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+input[type='number'] {
+  appearance: textfield;
+}
+
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+  appearance: none;
+}
+
+::placeholder {
+  font: inherit;
+  color: inherit;
+}
+
+:disabled {
+  pointer-events: none;
+}
+
+:root {
+  /* Taupe */
+  --taupe-DEFAULT: #463f3a;
+  --taupe-100: #0e0d0c;
+  --taupe-200: #1c1917;
+  --taupe-300: #2a2623;
+  --taupe-400: #38322e;
+  --taupe-500: #463f3a;
+  --taupe-600: #6f645d;
+  --taupe-700: #978b82;
+  --taupe-800: #b9b1ac;
+  --taupe-900: #dcd8d5;
+
+  /* Battleship Gray */
+  --battleship-gray-DEFAULT: #8a817c;
+  --battleship-gray-100: #1c1a18;
+  --battleship-gray-200: #373331;
+  --battleship-gray-300: #534d49;
+  --battleship-gray-400: #6e6662;
+  --battleship-gray-500: #8a817c;
+  --battleship-gray-600: #a19995;
+  --battleship-gray-700: #b9b3b0;
+  --battleship-gray-800: #d0ccca;
+  --battleship-gray-900: #e8e6e5;
+
+  /* Silver */
+  --silver-DEFAULT: #bcb8b1;
+  --silver-100: #282622;
+  --silver-200: #4f4b44;
+  --silver-300: #777165;
+  --silver-400: #9c958a;
+  --silver-500: #bcb8b1;
+  --silver-600: #cac7c1;
+  --silver-700: #d8d5d1;
+  --silver-800: #e5e3e0;
+  --silver-900: #f2f1f0;
+
+  /* Isabelline */
+  --isabelline-DEFAULT: #f4f3ee;
+  --isabelline-100: #3b3726;
+  --isabelline-200: #756e4d;
+  --isabelline-300: #a8a17a;
+  --isabelline-400: #cfcab5;
+  --isabelline-500: #f4f3ee;
+  --isabelline-600: #f7f6f3;
+  --isabelline-700: #f9f8f6;
+  --isabelline-800: #fbfbf9;
+  --isabelline-900: #fdfdfc;
+
+  /* Melon */
+  --melon-DEFAULT: #e0afa0;
+  --melon-100: #3a1c13;
+  --melon-200: #743825;
+  --melon-300: #ad5438;
+  --melon-400: #cd7d65;
+  --melon-500: #e0afa0;
+  --melon-600: #e6beb2;
+  --melon-700: #eccec5;
+  --melon-800: #f3dfd8;
+  --melon-900: #f9efec;
+
+  /* Breakpoints */
+  --breakpoint-1920: 1919px;
+  --breakpoint-1680: 1679px;
+  --breakpoint-1440: 1439px;
+  --breakpoint-1200: 1199px;
+  --breakpoint-800: 799px;
+  --breakpoint-600: 599px;
+  --breakpoint-400: 399px;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  :root {
+    scroll-behavior: smooth;
+  }
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font:
+    400 16px / 1.5 -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    Roboto,
+    Oxygen-Sans,
+    Ubuntu,
+    Cantarell,
+    'Helvetica Neue',
+    serif;
+  height: 100svh;
+  display: flex;
+  background-color: var(--isabelline-DEFAULT);
+  color: var(--taupe-DEFAULT);
+  @media (max-width: var(--breakpoint-1440)) {
+    font-size: 14px;
+  }
+}
+
+main {
+  display: flex;
+  flex: auto;
+  overflow: auto;
+  margin: 0 auto;
+  max-width: var(--breakpoint-1920);
+  padding: 56px 94px;
+
+  @media (width <= 2560px), (width > 2560px) {
+    /*max-width: 1440px;*/
+  }
+  @media (width <= 1440px) {
+    /*max-width: 1200px;*/
+  }
+  @media (width <= 1200px) {
+    padding: 0 64px;
+  }
+  @media (width <= 992px) {
+    /*max-width: 768px;*/
+  }
+  @media (width <= 768px) {
+    /*max-width: 576px;*/
+  }
+  @media (width <= 576px) {
+    padding: 0 16px;
+  }
+}
+
+a {
+  color: var(--melon-300);
+  cursor: pointer;
+  font-weight: 500;
+}
+
+a:hover {
+  filter: brightness(120%);
+}
+
+::placeholder {
+  color: var(--silver-400);
+}
+
+.section-wrapper {
+  flex: auto;
+  border-radius: 16px;
+  background: var(--silver-800);
+  padding: 16px;
+  overflow: auto;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 32px 32px;
+  grid-auto-flow: row;
+  grid-template-areas: 'tabs shared-params-form qr-generation-result';
+
+  @media (width <= 1200px) {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: max-content max-content auto;
+    gap: 16px 16px;
+    grid-template-areas:
+      'tabs'
+      'shared-params-form'
+      'qr-generation-result';
+  }
+}
+
+#preview {
+  background: var(--isabelline-900);
+  border-radius: 16px;
+  display: flex;
+  justify-content: center;
+}
+
+.qr-preview {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 8px;
+}
+
+.tab-forms {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: auto;
+
+  @media (width <= 1440px) {
+    flex: 0;
+  }
+}
+
+.tabs {
+  grid-area: tabs;
+  overflow: auto;
+  padding-right: 16px;
+
+  @media (width <= 1440px) {
+    padding-right: 0;
+  }
+}
+
+.tab-captions {
+  display: flex;
+  gap: 10px;
+  background: var(--silver-700);
+  padding: 20px;
+  border-radius: 16px;
+  overflow: auto;
+}
+
+.tab-contents {
+  overflow: auto;
+}
+
+.tab {
+  padding: 10px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.tab.active {
+  background-color: var(--isabelline-300);
+  font-weight: bold;
+  color: var(--isabelline-DEFAULT);
+  border-radius: 4px;
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+.qr-generation-result-wrapper {
+  grid-area: qr-generation-result;
+}
+
+form[name='QXYZ'],
+form[name='TEXT'],
+form[name='URL'],
+form[name='PHONE'],
+form[name='SMS'],
+form[name='EMAIL'],
+form[name='CONTACT'],
+form[name='WIFI'],
+form[name='LOCATION'],
+form[name='SHARED-PARAMS'] {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  padding-top: 16px;
+
+  @media (width <= 1440px) {
+    gap: 16px;
+  }
+}
+
+form[name='QXYZ'],
+form[name='EMAIL'],
+form[name='CONTACT'] {
+  gap: 16px;
+}
+
+.form-control {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.form-control-label {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.form-control-checkbox-radio-label {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.checkbox-form-control {
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+  gap: 8px;
+}
+
+.qr-textarea {
+  border-radius: 16px;
+  border: 0;
+  padding: 8px;
+  font-size: 16px;
+}
+
+.qr-text-input {
+  font-size: 16px;
+  border-radius: 16px;
+  border: 0;
+  padding: 8px;
+  height: 56px;
+}
+
+.qr-color-input {
+  border-radius: 16px;
+  border: 0;
+  padding: 8px;
+  height: 56px;
+  min-width: 56px;
+}
+
+.qr-checkbox-input {
+  height: 20px;
+  width: 20px;
+  accent-color: var(--melon-300);
+}
+
+.qr-radio-input {
+  height: 20px;
+  width: 20px;
+  accent-color: var(--melon-300);
+}
+
+.wifi-encryption-radio-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+
+  @media (width <= 1440px) {
+    gap: 16px;
+  }
+}
+
+.shared-params-form {
+  grid-area: shared-params-form;
+}
+
+.shared-params-colors {
+  display: flex;
+  gap: 32px;
+
+  @media (width <= 1440px) {
+    gap: 16px;
+  }
+}
+
+.file-type-radio-buttons,
+.correction-level-radio-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+
+  @media (width <= 1440px) {
+    gap: 16px;
+  }
+}
+
+#generate-qr-button {
+  appearance: none;
+  background-color: var(--melon-200);
+  border: 2px solid var(--melon-200);
+  border-radius: 16px;
+  box-sizing: border-box;
+  color: var(--isabelline-DEFAULT);
+  cursor: pointer;
+  display: inline-block;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: normal;
+  margin: 0;
+  min-height: 60px;
+  min-width: 0;
+  outline: none;
+  padding: 16px 24px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 300ms cubic-bezier(0.23, 1, 0.32, 1);
+  user-select: none;
+  touch-action: manipulation;
+  will-change: transform;
+}
+
+#generate-qr-button:disabled {
+  pointer-events: none;
+  background: var(--silver-300);
+}
+
+#generate-qr-button:hover {
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 16px;
+  transform: translateY(-2px);
+}
+
+#generate-qr-button:active {
+  box-shadow: none;
+  transform: translateY(0);
+}
