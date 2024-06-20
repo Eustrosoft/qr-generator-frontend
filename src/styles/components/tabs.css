@@ -12,6 +12,11 @@
 .tabs {
   grid-area: tabs;
   overflow: auto;
+  padding-right: 16px;
+
+  @media (width <= 1440px) {
+    padding-right: 0;
+  }
 }
 
 .tab-captions {
