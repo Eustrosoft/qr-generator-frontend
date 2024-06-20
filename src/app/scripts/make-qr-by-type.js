@@ -1,9 +1,20 @@
 import { FORM_TYPE } from '../constants/app.constants.js';
 import { renderQrImg } from './render-qr-img.js';
-import { getSharedParamsFormValue } from '../components/forms/forms.js';
+import {
+  getFormValue,
+  getSharedParamsForm,
+} from '../components/forms/forms.js';
 
 export const makeQrByType = (form) => {
-  const sharedParams = getSharedParamsFormValue();
+  const sharedParamsForm = getSharedParamsForm();
+  sharedParamsForm.requestSubmit();
+
+  if (!sharedParamsForm.checkValidity()) {
+    return;
+  }
+
+  const sharedParams = getFormValue(sharedParamsForm);
+
   switch (form.formName) {
     case FORM_TYPE.QXYZ: {
       const params = {
@@ -102,6 +113,9 @@ export const makeQrByType = (form) => {
         ...sharedParams,
       };
       renderQrImg(params);
+      break;
+    }
+    case FORM_TYPE.SHARED_PARAMS: {
       break;
     }
     default: {

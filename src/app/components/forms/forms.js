@@ -20,9 +20,6 @@ export const getFormValue = (form) => {
   return Object.fromEntries(formData);
 };
 
-export const getSharedParamsFormValue = () => {
-  const sharedParamsForm = document.querySelector(
-    `form[name="${FORM_TYPE.SHARED_PARAMS}"]`,
-  );
-  return getFormValue(sharedParamsForm);
+export const getSharedParamsForm = () => {
+  return document.querySelector(`form[name="${FORM_TYPE.SHARED_PARAMS}"]`);
 };
